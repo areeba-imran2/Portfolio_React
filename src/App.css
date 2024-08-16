@@ -1,38 +1,320 @@
-.App {
+/* Home.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-right: 50px;
+  background-color: #ffffff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-logo {
+  height: 40px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-weight: bold;
+  position: relative; /* Position for hover effect */
+  padding-bottom: 5px; /* Space for underline */
+  transition: color 0.3s, border-bottom 0.3s; 
+}
+
+.navbar-links a:hover {
+  color: #6a5acd; /* Hover text color */
+  border-bottom: 2px solid #6a5acd; /* Hover underline effect */
+}
+
+.navbar-right .contact-button {
+  padding: 5px 15px;
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Ensure text size is readable */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.navbar-right .contact-button:hover {
+  background-color: #5a4ab3; /* Darker shade on hover */
+}
+
+
+/* About.css */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #f0f0f0;
+  margin-right: 50px;
+  margin-left: 50px;
+
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.text-content {
+  max-width: 50%;
+}
+
+.text-content h2 {
+  font-size: 24px;
+  color: #555;
+}
+
+.text-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.text-content h1 .highlight {
+  color: #6a5acd;
+}
+
+.text-content p {
+  font-size: 18px;
+  color: #777;
+  margin: 20px 0;
+}
+
+.contact-button {
+  padding: 10px 20px;
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contact-button:hover {
+  background-color: #5a4ab3;
+}
+
+.image-content .profile-image {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.skills-container {
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.skills-heading {
+  /* font-size: 2rem; */
+   margin-bottom: 20px; 
+  text-align: left;
+  padding-left: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.skill-card {
+  background-color:#e0f7fa;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.skill-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.bg-colorgrey{
+  background-color: #f0f0f0;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+/* Footer css */
+
+.footerSection {
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  /* border-top: 1px solid; */
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.navLinks {
+  flex: 2;
+  display: flex;
+  /* padding-left: 410px; */
+  justify-content: center;
+  gap: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.navLinks a:hover {
+  color: #6f42c1; /* Highlight color */
+}
+
+.socialIcons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.socialIcons a {
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.socialIcons a:hover {
+  color: #6f42c1; /* Highlight color */
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  text-align: left;
+  padding: 10px 50px;
+  background-color: #e8e8e8;
+  border-top: 1px solid #ccc;
+}
+
+.footerBottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.legalLinks a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.legalLinks a:hover {
+  color: #6f42c1; /* Highlight color */
+}
+/* Contact Form css */
+
+.contactContainer {
+  max-width: 500px; 
+  margin: 0 auto;
+  padding: 2rem; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;
+  background-color: #ffffff; /* Ensures the background matches */
+}
+
+.contactHeading {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Increased margin for better spacing */
+  font-size: 2rem; /* Increased font size for prominence */
+  color: #333; /* Consistent color */
+}
+
+.contactForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem; /* Increased margin for consistency */
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333; /* Consistent color */
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 1rem; /* Increased padding for better readability */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem; /* Consistent font size */
+  color: #333; /* Consistent text color */
+}
+
+.submitButton {
+  padding: 0.75rem;
+  background-color: #6a5acd; /* Consistent button color */
   color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
-.App-link {
-  color: #61dafb;
+.submitButton:hover {
+  background-color: #5a4ab3; /* Hover color consistent with other buttons */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.successMessage {
+  margin-top: 1rem;
+  color: #28a745; /* Consistent with success messages */
+  text-align: center;
+  font-size: 1rem;
 }
